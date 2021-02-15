@@ -7,3 +7,7 @@
 * Run `npm start` from the terminal window.
 * Your web app should appear in a browser window using the address e.g. _localhost:10001_ or something similar.
 
+## Useful links
+
+* [https://getbootstrap.com/](https://getbootstrap.com/)
+* [https://www.w3schools.com/bootstrap4/default.asp](https://www.w3schools.com/bootstrap4/default.asp)
