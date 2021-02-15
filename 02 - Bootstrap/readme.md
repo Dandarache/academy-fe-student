@@ -9,5 +9,13 @@
 
 ## Useful links
 
+### Bootstrap
+
 * [https://getbootstrap.com/](https://getbootstrap.com/)
 * [https://www.w3schools.com/bootstrap4/default.asp](https://www.w3schools.com/bootstrap4/default.asp)
+
+### Dummy content
+
+* [https://www.lipsum.com/](https://www.lipsum.com/)
+* [https://picsum.photos/](https://picsum.photos/)
+* [https://placeholder.com/](https://placeholder.com/)
