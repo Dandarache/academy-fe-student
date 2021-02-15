@@ -13,7 +13,7 @@ bld/
 packages
 .vs
 #.vscode
-
+node_modules/
 # files
 
 *.user
