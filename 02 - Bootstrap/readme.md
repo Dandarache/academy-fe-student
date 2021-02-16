@@ -19,3 +19,7 @@
 * [https://www.lipsum.com/](https://www.lipsum.com/)
 * [https://picsum.photos/](https://picsum.photos/)
 * [https://placeholder.com/](https://placeholder.com/)
+
+### VS Code
+
+* [https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)

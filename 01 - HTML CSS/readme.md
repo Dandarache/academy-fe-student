@@ -9,8 +9,17 @@
 
 ## Useful links
 
+### Guides and basic training
+
+* [https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web)
+* [https://www.w3schools.com/html/default.asp](https://www.w3schools.com/html/default.asp)
+
 ### Dummy content
 
 * [https://www.lipsum.com/](https://www.lipsum.com/)
 * [https://picsum.photos/](https://picsum.photos/)
 * [https://placeholder.com/](https://placeholder.com/)
+
+### VS Code
+
+* [https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
