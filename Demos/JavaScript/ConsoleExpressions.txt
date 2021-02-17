@@ -1,0 +1,52 @@
+/* Visa uttryck först i Consolen (F12)
+
+    3+4
+
+    777*555
+
+    777*555 - 3
+
+    13 * 13 == 169
+
+    13 * 13 == 168
+
+    "What"
+
+    "What" + " does" == "What does"
+
+    alert('hej')
+
+    window.confirm('Äta lunch?')
+    true
+
+    window.confirm('Äta lunch?')
+    false
+
+    let answer = window.confirm('Äta lunch?')
+
+    if (answer==true) alert('Du svarade ja!') else alert('Du svarade nej!')
+
+    if (13 * 13 == 169) alert('Tretton gånger tretton är 169') else alert('Nej!')
+
+    if (13 * 13 == 168) alert('Tretton gånger tretton är 168') else alert('Nej!')
+
+    Math.PI
+
+    Math.PI * 7 * 7
+
+    alert('Arean av en cirkel med radien 7 är ' + Math.PI*7*7)
+
+    alert('Arean av en cirkel med radien 7 är ' + (Math.PI*7*7).toFixed(2))
+
+    let radie = 5        
+    alert('Arean av en cirkel med radien ' + radie + '  är ' + (Math.PI*radie*radie).toFixed(2))
+
+    new Date()
+
+    new Date().getMinutes()
+
+    new Date().getHours() + ":" + new Date().getMinutes() 
+
+    "Klockan är " + new Date().getHours() + ":" + new Date().getMinutes() 
+    
+*/
