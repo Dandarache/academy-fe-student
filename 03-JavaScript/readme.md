@@ -19,6 +19,12 @@ Copy this folder to your e.g. lab-folder and follow the instructions below to cr
 
 Below you will some links related to basic JavaScript training.
 
+### JavaScript (EcmaScript)
+
+* [https://www.w3schools.com/js/js_variables.asp](https://www.w3schools.com/js/js_variables.asp)
+* [https://www.w3schools.com/js/default.asp](https://www.w3schools.com/js/default.asp)
+* [https://developer.mozilla.org/en-US/docs/Learn/JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript)
+
 ### Bootstrap
 
 * [https://getbootstrap.com/](https://getbootstrap.com/)
