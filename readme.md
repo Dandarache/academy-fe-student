@@ -22,9 +22,10 @@ Below you will some links related to basic web development.
 
 ### Optimization
 
+* [https://validator.w3.org/](https://validator.w3.org/)
 * [https://tinypng.com/](https://tinypng.com/) Optimize/compress images
 
 ### VS Code
 
 * [https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
-
+* [https://docs.microsoft.com/sv-se/archive/blogs/cdndevs/visual-studio-code-and-local-web-server](https://docs.microsoft.com/sv-se/archive/blogs/cdndevs/visual-studio-code-and-local-web-server)
