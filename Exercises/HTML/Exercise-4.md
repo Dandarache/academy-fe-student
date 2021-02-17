@@ -10,8 +10,19 @@
 
 ## Övningar
 
+### Skapa formulär
+
 * Skapa en ny fil som du döper till *formular.html*
 * Skriv kod så att du skapar ett formulär enligt bilden nedan.
 
 ![](images/400.png)
+
+### POST
+
+Ange följande i FORM-taggen
+
+    <form method="POST" action="https://www.w3schools.com/action_page.php">
+
+Detta kommer att göra att formulär-datat skickas till den angivna adressen.
+
 
