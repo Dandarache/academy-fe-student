@@ -16,6 +16,7 @@
 
 * Skapa en ny fil och kopiera in följande kod (samma kod som visas på Bootstraps hemsida, dvs startup template.).
 
+``
     <!doctype html>
     <html lang="en">
     <head>
@@ -38,7 +39,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
     </html>
-
+``
 
 ## Krav
 
