@@ -26,10 +26,10 @@ function fun2() {
     /*
     Liknande som sist men gör en metod sayHiTo() som tar ett namn som inparameter.
 
-    Ex sayHiTo("Oscar") ska skriva ut:
+    Ex sayHiTo("DITT_NAMN") ska skriva ut:
 
     --------
-    -------- VÄLKOMMEN OSCAR
+    -------- VÄLKOMMEN DITT_NAMN
     --------
 
     */

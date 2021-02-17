@@ -2,7 +2,7 @@
 
 function var1() {
     /* Skriv ut "Jag heter XXXX" i consolen */
-    console.log('Jag heter Oscar');
+    console.log('Jag heter DITT_NAMN');
 
     // Extra: skriv flera meningar
 }
@@ -112,7 +112,7 @@ function var11() {
 
 function var12() {
     /*
-    Skapa en variabel "x". Sätt värdet till "parseInt('oscar')"
+    Skapa en variabel "x". Sätt värdet till "parseInt('DITT_NAMN')"
     Skriv ut x (ska ge "NaN")
     Använd "isNaN" fär att kolla om x är ett icke-nummer. Sätt y till det värdet (y kommer få värdet true)
     Skriv ut y
