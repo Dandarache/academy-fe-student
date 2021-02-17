@@ -14,9 +14,9 @@
 
 [https://getbootstrap.com/docs/4.0/getting-started/introduction/](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
 
-* Skapa en ny fil och kopiera in följande kod (samma kod som visas på Bootstraps hemsida, dvs startup template.).
+* Skapa en ny fil och som du döper till *index.html* och kopiera in följande kod (samma kod som visas på Bootstraps hemsida, dvs startup template.).
 
-``
+```
     <!doctype html>
     <html lang="en">
     <head>
@@ -39,7 +39,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
     </html>
-``
+```
 
 ## Krav
 
@@ -50,12 +50,11 @@
     * Hobbies?
     * ... här kan ni i proncip skriva lite vad som helst och det går även bra att använda lipsum.org (helst inte).
 * En sida med ett kontaktformulär.
-* "Tabbade" flikar skall finnas med någonstans.
 * Tabeller borde finnas med om det känns rätt.
 * Det skall finnas bilder och gärna något filmklipp.
 * Använd er *kreativitet* och det är *fritt fram att gå bananas* så länge som det är korrekt HTML-kod som skapas med Bootstrap som basplatta.
 
 ## Redovisning
 
-* Klockan 16:15 är det redovisning då varje grupp presenterar sina miniprojekt.
+* Klockan 16:30 är det redovisning då varje grupp presenterar sina miniprojekt.
 * Vi kör paus varje hel timme som vanligt.
