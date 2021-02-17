@@ -12,4 +12,4 @@ Om du har en fungerande virtuell server kan du skippa stegen nedan och gå direk
 
 ## Övningar
 
-* Samtliga övningar ligger i mappen [03 - JavaScript](../../03 - JavaScript).
+* Samtliga övningar ligger i mappen [03-JavaScript](../../03-JavaScript).
