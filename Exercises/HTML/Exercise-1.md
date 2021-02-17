@@ -1,4 +1,4 @@
-# Övning 1
+# Övning 1 - Tabeller
 
 ## Setup
 
