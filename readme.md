@@ -1,5 +1,12 @@
 # Frontend Development Resources
 
+## Projects
+
+* [00-Setup](00-Setup)
+* [01-HTML-CSS](01-HTML-CSS)
+* [02-Bootstrap](02-Bootstrap)
+* [03-JavaScript](03-JavaScript)
+
 ## Useful links
 
 Below you will some links related to basic web development.
