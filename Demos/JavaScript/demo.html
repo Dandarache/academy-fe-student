@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        // Här kan man skriva JavaScript!
+
+    </script>
+
+    <!-- Här länkar vi in en extern JS-fil -->
+    <!-- <script src="LANK_TILL_MIN_SEPARATA_JS_FIL.js"></script> -->
+</head>
+
+<body>
+
+    <script>
+
+        /////////////////////////////////
+        // Allmänt om JavaScript
+        /////////////////////////////////
+
+        // Här kan man skriva JavaScript!
+
+        // alert("JavaScript är nästan som C#... ibland :-)");
+
+        /////////////////////////////////
+        // Arrayer
+        /////////////////////////////////
+
+        let myArr = ['Skidor', 'Cykling', 'Karate', 'Fäktning']
+        console.log(myArr);
+
+        console.log(myArr[2]);
+
+        myArr.push("Löpning");
+
+        console.log(`Arrayen över sporter är ${myArr.length} rader.`);
+
+        let mySport = myArr.pop();
+        console.log(mySport);
+        console.log(myArr);
+
+        // Ta bort Cykling och Karate?
+
+        let myArrSport = myArr.splice(1, 2);
+        console.log(myArrSport);
+
+        // Array med object
+
+        let myArrObject = [{ sport: 'Sprint', id: 3, answer: true }, { sport: 'Curling', id: 10 }, { sport: 'Boxning', id: 2 }]
+        console.log(myArrObject);
+
+        console.log(myArr);
+
+        /////////////////////////////////
+        // Loopar
+        /////////////////////////////////
+
+        for (let index = 0; index < 10; index++) {
+            console.log(`Siffran är ${index}`);
+        }
+
+        for (const key of myArr) {
+            // key = 'foo'; // Gör att man får ett exception
+            console.log(`Värdet är: ${key}`);
+        }
+
+        myArr.forEach(element => {
+            // element = 'foo';
+            console.log(element);
+        });
+
+        for (const key of myArrObject) {
+            // key = 'foo';
+            console.log(`Värdet är: ID=${key.id}, Sport:${key.sport}, Answer:${key.answer}`);
+        }
+
+        // Om undefined?
+        for (const key of myArrObject) {
+            console.log(`Värdet är: ID=${key.id}, Sport:${key.sport}, Answer:${key.answer == undefined ? false : key.answer}`);
+        }
+
+        // Sort object array
+        myArrObject.sort(function (a, b) { return a.id - b.id; });
+        console.log(myArrObject);
+
+        // conditionals "someHigh" och "some"
+        {
+            function someHigh(number, ...variables) // params
+            {
+                for (const v of variables) {
+                    if (v > number) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+
+            let shoeAli = 42;
+            let shoeMaria = 36;
+            let shoeBigFoot = 52;
+
+            // if (shoeBigFoot > 50 || shoeMaria > 50 || shoeAli > 50) {
+            //     console.log("Någon har stora fötter!");
+            // }
+
+            if (someHigh(50, shoeAli, shoeBigFoot, shoeMaria)) {
+                console.log("Någon har stora fötter! (someHigh)");
+            }
+
+            // if ([shoeBigFoot, shoeMaria, shoeAli].some(x => x > 50)) {
+            //     console.log("Någon har stora fötter! (some)");
+            // }
+        }
+
+        /////////////////////////////////
+        // Object
+        /////////////////////////////////
+
+        {
+            let persons = [];
+
+            let dan = {
+                firstName: 'Dan',
+                lastName: 'Jansson',
+                hobbies: ['Musik', 'Programmering', 'Cykling', 'Snickra', 'Löpning'],
+                age: 49
+            };
+            persons.push(dan);
+
+            let lisa = {
+                firstName: 'Lisa',
+                lastName: 'Karlsson',
+                hobbies: ['Karate', 'Dykning'],
+                age: 25
+            };
+            persons.push(lisa);
+
+            persons.push({
+                firstName: 'Arne',
+                lastName: 'Svensson',
+                hobbies: ['Karate', 'Dykning'],
+                age: 25
+            });
+
+            console.log(persons);
+
+            console.log(persons[0].hobbies[1]);
+
+            for (const person of persons) {
+                console.log(`${person.firstName} ${person.lastName} ${person.hobbies[1]}`);
+            }
+        }
+
+        /////////////////////////////////
+        // Functions
+        /////////////////////////////////
+
+        {
+            function upperCaseHello(name)
+            {
+                return `Hello ${name.toUpperCase()}`;
+            }
+
+            let myName = prompt("Vad heter du?");
+
+            console.log(upperCaseHello(myName));
+        }
+
+        {
+            let myNumber = parseInt(prompt("Mata in ett nummer!"));
+
+            let myCalculation = myNumber * 55;
+
+            console.log(myCalculation);
+            console.log(myCalculation == undefined);
+        }
+
+        /////////////////////////////////
+        // Delegater - Tack Jonas för frågan och demo :-)
+        // Ni hittar Jonas kod i mappen demo
+        /////////////////////////////////
+
+    </script>
+</body>
+
+</html>
