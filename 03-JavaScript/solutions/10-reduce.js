@@ -30,7 +30,7 @@ function reduce4() {
 
     let y = countNames(names)
 
-    // ...ska leda till att y blir 
+    // Din kod ...ska leda till att y blir 
     // {Alice: 2, Bob: 3, Tiff: 1, Bruce: 1}
 
 
