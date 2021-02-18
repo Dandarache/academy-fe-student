@@ -1,4 +1,4 @@
-# 03 - JavaScript
+# 04 - JavaScript DOM
 
 ## Overview
 
@@ -24,8 +24,6 @@ Below you will some links related to basic JavaScript training.
 * [https://www.w3schools.com/js/js_variables.asp](https://www.w3schools.com/js/js_variables.asp)
 * [https://www.w3schools.com/js/default.asp](https://www.w3schools.com/js/default.asp)
 * [https://developer.mozilla.org/en-US/docs/Learn/JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript)
-* [https://medium.com/@nataliecardot/foreach-vs-for-of-vs-for-in-loops-472146fc1a1f](https://medium.com/@nataliecardot/foreach-vs-for-of-vs-for-in-loops-472146fc1a1f)
-* [https://codeburst.io/javascript-breaking-down-the-shortest-possible-fizzbuzz-answer-94a0ad9d128a](https://codeburst.io/javascript-breaking-down-the-shortest-possible-fizzbuzz-answer-94a0ad9d128a)
 
 ### VS Code
 

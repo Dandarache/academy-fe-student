@@ -6,6 +6,7 @@
 * [01-HTML-CSS](01-HTML-CSS)
 * [02-Bootstrap](02-Bootstrap)
 * [03-JavaScript](03-JavaScript)
+* [04-JavaScript-DOM](04-JavaScript-DOM)
 
 ## Useful links
 
