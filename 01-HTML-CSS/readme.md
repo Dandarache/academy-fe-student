@@ -35,3 +35,4 @@ Below you will some links related to basic HTML training.
 ### VS Code
 
 * [https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
+* [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)

@@ -37,3 +37,4 @@ Below you will some links related to basic web development.
 
 * [https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
 * [https://docs.microsoft.com/sv-se/archive/blogs/cdndevs/visual-studio-code-and-local-web-server](https://docs.microsoft.com/sv-se/archive/blogs/cdndevs/visual-studio-code-and-local-web-server)
+* [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)

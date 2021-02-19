@@ -11,6 +11,7 @@ Check version of NPM and Node.js by running the following commands in a command 
 
 * [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
 * [https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
+* [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 
 ### Node.js
 
