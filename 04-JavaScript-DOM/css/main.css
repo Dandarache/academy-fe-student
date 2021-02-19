@@ -1,0 +1,21 @@
+﻿body {
+    font-family: arial
+}
+
+img {
+    width: 300px
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+button {
+    display: block;
+    margin-bottom: 10px
+}
