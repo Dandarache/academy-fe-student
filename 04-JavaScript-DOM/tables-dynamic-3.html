@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Training</title>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="playground">
+
+        <div>
+            Hur många rader skall skapas i tabellen:
+        </div>
+        <input type="text" id="txtRows" />
+
+        <button id="btAddRows">Lägg till rader i tabellen</button>
+
+        <div id="response" class="response">
+            <table id="myTable">
+                <thead>
+                    <th>Id</th>
+                    <th>Namn</th>
+                </thead>
+                <tr>
+                    <td>1</td>
+                    <td>Laban</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <script>
+
+        // UPPGIFT: Skapa en tabell som visar informationen i objektet nedan.
+
+        // Tabellen skall ha en rubrik för varje kolumn.
+
+        // Det skall vara en rad per konstnär.
+
+        // Tips: Använd document.createElement för att skapa de olika elementen som behövs.
+
+        let paintings = [
+            {
+                name: "Stjärnenatt",
+                artist: "Vincent van Gogh",
+                year: 1889
+            },
+            {
+                name: "Nattvarden",
+                artist: "Leonardo da Vinci",
+                year: 1499
+            },
+            {
+                name: "Gurenica",
+                artist: "Pablo Picasso",
+                year: 1937
+            }
+        ];
+
+
+        // Din kod ...
+
+
+
+    </script>
+
+</body>
+
+</html>
