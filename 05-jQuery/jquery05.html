@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript jQuery Training</title>
+    <link href="css/main.css" rel="stylesheet">
+    <!-- Ange en referens till ett jQuery bibliotek nedan. Du kan antingen använda en referens till ett lokalt bibliotek eller en länk till CDN. -->
+    <!-- TIPS: https://www.w3schools.com/jquery/jquery_get_started.asp -->
+    <!-- <script src="LÄNK_TILL_JQUERY"></script> -->
+</head>
+
+<body>
+
+    <div class="playground">
+
+        <div>
+            Förnamn:
+        </div>
+        <input type="text" id="firstName" />
+
+        <div>
+            Förnamn:
+        </div>
+        <input type="text" id="lastName" />
+
+        <div>
+            Postnummer:
+        </div>
+        <input type="text" id="zipCode" />
+
+        <div>
+            Ålder:
+        </div>
+        <input type="text" id="age" />
+
+        <div>
+            Email:
+        </div>
+        <input type="text" id="email" />
+
+        <div>
+            Hobby:
+        </div>
+        <input type="text" id="email" />
+
+        <button id="btSend">Ok</button>
+
+        <div id="validationErrors" class="response">
+        </div>
+
+    </div>
+
+    <script>
+
+        // UPPGIFT: Validera att alla formulärdata är korrekta när formuläret postas ovan.
+
+        // Om någonting saknas skall alla felaktiga fält visas upp som en punktad lista i rutan validationErrors.
+
+        // Exempel på validerings fel som kan uppstå:
+        //    - Förnamn saknas.
+        //    - Efternamn saknas.
+        //    - Felaktigt postnummer.
+        //    - Postnummer saknas.
+        //    - Felaktig emailadress.
+        //    - Emailadress är obligatorisk.
+        //    - Ålder skall vara mellan 18 och 65 år. 
+        //    - Ålder är obligatorisk.
+        
+        // Tips: Kontrollera att fälten för för- och efternamn inte är tomma genom att kolla längden på strängen.
+
+        // Tips: Det räcker med att email innehåller ett @-tecken. 
+        //       Om du vill kan du använda regex för att validera emailadressen.
+        
+        // Tips: Kontrollera postnummer genom att räkna antal tecken plus att du även 
+        //       kollar att det inte blir isNaN om du kör parseInt. Bästa sättet att kontrollera
+        //       postnummer är dock att använda regex, så prova gärna detta.
+
+
+        // Din kod ...
+
+    </script>
+
+</body>
+
+</html>

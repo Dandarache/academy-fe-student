@@ -1,0 +1,112 @@
+body
+{
+	margin: 0
+}
+
+button, input,div, textarea
+{
+	display: block;
+	font-size: 30px;
+	font-family: Arial;
+	margin-bottom: 20px
+}
+
+button,input, textarea
+{
+	width:100%;
+	padding:20px;
+	box-sizing: border-box;
+}
+
+textarea
+{
+	padding:20px 15px 5px 15px;
+	font-size: 16px;
+	height:170px;
+}
+
+.editabletext
+{
+	padding:20px;
+	background:#eee
+}
+h1
+{
+	font-size: 60px;
+}
+
+p
+{
+	font-size: 30px;
+}
+
+img
+{
+	width:100%;
+	margin:0;
+	padding:0;
+}
+
+.temperatureVisualized
+{
+	width:300px;
+	margin:20px;
+}
+.page-black
+{
+	background-color: black;
+}
+.description
+{
+	background-color: #d3e7f5;
+	padding:20px;
+	font-size: 16px;
+	margin-bottom:0;
+}
+
+.playground
+{
+	padding:20px;
+}
+
+.playground-black
+{
+	background-color:black;
+}
+
+.box
+{
+	width:300px;
+	height:300px;
+	border:solid 1px;
+}
+
+.bulb
+{
+	width:20%;
+	margin-bottom: 15px;
+}
+
+.bulb-smaller
+{
+	width: 10%;
+    margin-bottom: 15px;
+}
+.button-smaller {
+    display: inline;
+    width: 10%;
+}
+
+.response
+{
+	color:green;
+}
+.response-white
+{
+	color:white;
+}
+.response-margin
+{
+	margin-left:20px;
+	margin-top:20px;
+}
