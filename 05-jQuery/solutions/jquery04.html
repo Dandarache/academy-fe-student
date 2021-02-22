@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript jQuery Training</title>
+    <link href="css/main.css" rel="stylesheet">
+    <!-- Ange en referens till ett jQuery bibliotek nedan. Du kan antingen använda en referens till ett lokalt bibliotek eller en länk till CDN. -->
+    <!-- TIPS: https://www.w3schools.com/jquery/jquery_get_started.asp -->
+    <!-- <script src="LÄNK_TILL_JQUERY"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body class="page-black">
+
+    <div class="playground playground-black">
+
+        <button id="btLightSwitch">Tänd/släck lampan</button>
+
+        <img id="bulb1" src="img/bulb-off.jpg" class="bulb" />
+    </div>
+
+    <script>
+
+        // UPPGIFT: Tänd och släck glödlampan genom att klicka på strömbrytaren.
+
+        // Din kod ...
+        let bulbState = true;
+        $(document).ready(function () {
+            $('#btLightSwitch').click(function () {
+                // $('#bulb1').src = bulbState ? $('#bulb1').attr('src', 'img/bulb-on.jpg') : $('#bulb1').attr('src', 'img/bulb-off.jpg');
+                // if(bulbState){
+                //     $('#bulb1').attr('src', 'img/bulb-on.jpg');
+                // }else{
+                //     $('#bulb1').attr('src', 'img/bulb-off.jpg');
+                // }
+                // bulbState = !bulbState;
+                toggleBulb();
+            })
+        });
+
+        // UPPGIFT: Tänd och släck glödlampan genom att klicka på glödlampan.
+        $(document).ready(function () {
+            $('#bulb1').click(function () {
+                // $('#bulb1').src = bulbState ? $('#bulb1').attr('src', 'img/bulb-on.jpg') : $('#bulb1').attr('src', 'img/bulb-off.jpg');
+                // if(bulbState){
+                //     $('#bulb1').attr('src', 'img/bulb-on.jpg');
+                // }else{
+                //     $('#bulb1').attr('src', 'img/bulb-off.jpg');
+                // }
+                // bulbState = !bulbState;
+                toggleBulb();
+            })
+        });
+
+        // UPPGIFT: Refaktorisera din kod så att du inte upprepar koden för att tända och släcka lampan ovan.
+        function toggleBulb() {
+            $('#bulb1').src = bulbState ? 
+                $('#bulb1').attr('src', 'img/bulb-on.jpg') : 
+                $('#bulb1').attr('src', 'img/bulb-off.jpg');
+            bulbState = !bulbState;
+        }
+
+
+    </script>
+
+</body>
+
+</html>

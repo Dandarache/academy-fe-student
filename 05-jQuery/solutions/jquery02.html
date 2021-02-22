@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript jQuery Training</title>
+    <style>
+        #box {
+            width: 300px;
+            height: 300px;
+            border: solid 1px;
+        }
+
+        #buttonWrap {
+            margin-bottom: 20px
+        }
+    </style>
+    <!-- Ange en referens till ett jQuery bibliotek nedan. Du kan antingen använda en referens till ett lokalt bibliotek eller en länk till CDN. -->
+    <!-- TIPS: https://www.w3schools.com/jquery/jquery_get_started.asp -->
+    <!-- <script src="LÄNK_TILL_JQUERY"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div id="buttonWrap">
+        <button id="btDarker">Darker</button>
+        <button id="btBrighter">Brighter</button>
+    </div>
+
+    <div id="box">
+    </div>
+
+    <script>
+
+        // UPPGIFT: Ändra färg på rutan genom att klicka på knapparna.        
+
+        // Om användaren trycker btBrighter så gör kvadraten mörkare (åt svart)
+        // Om användaren trycker btDarker så gör kvadraten rödare (åt helrött)
+
+        let currentState = 100;
+
+        // Din kod ...
+
+        // $(document).ready(function () {
+        //     $('#btDarker').click(function () {
+        //         currentState -= 20;
+        //         if (currentState < 0) {
+        //             currentState = 0;
+        //         }
+        //         redraw();
+        //     });
+
+        //     $('#btBrighter').click(function () {
+        //         currentState += 20;
+        //         if (currentState > 255) {
+        //             currentState = 255;
+        //         }
+        //         redraw();
+        //     });
+
+        //     redraw();
+        // });
+
+        // function redraw() {
+        //     $('#box').css('background-color', `rgb(${currentState},0,0)`);
+        // }
+
+
+
+        // Alternativ lösning
+
+        $(document).ready(function () {
+            $("#btDarker").click(function () {
+                $("#box").css({ transition: 'background-color 2s ease-in-out', "background-color": "black" });
+            });
+            $("#btBrighter").click(function () {
+                $("#box").css({ transition: 'background-color 2s ease-in-out', "background-color": "red" });
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
