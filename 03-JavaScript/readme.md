@@ -7,6 +7,12 @@ Copy this folder to your e.g. lab-folder and follow the instructions below to cr
 
 ## Setup Virtual Server
 
+### Live Server VS Code Extension
+
+* TIP: Use the Live Server VS Code extensions as a web server for these exercises. Skip the setup steps below if you use the Live Server extension.
+
+### Alternate virtual web server installation
+
 * Run `npm install` from the terminal window or from a command prompt.
 * When the installation is completed you might see some warnings, but you can ignore those.
 * Run `npm start` from the terminal window.
