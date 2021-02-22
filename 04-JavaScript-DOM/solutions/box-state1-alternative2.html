@@ -1,0 +1,36 @@
+
+<style>
+    #box {
+        width: 300px;
+        height: 300px;
+        border: solid 1px;
+        margin-top: 10px;
+    }
+</style>
+
+<div id="buttons"></div>
+
+<div id="box">
+</div>
+
+<script>
+    // Box'arna skapas helt från "list"
+    let list = ["Red", "Green", "Blue"];
+    
+    let buttons = document.getElementById("buttons");
+    let box = document.getElementById("box");
+
+    for (const color of list) {
+
+        let button = document.createElement("button")
+        button.innerText = color;
+
+        button.onclick = () => {
+            box.style.backgroundColor = color.toLowerCase();
+        };
+
+        buttons.appendChild(button)
+    };
+
+
+</script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body class="page-black">
+
+    <div class="playground playground-black">
+        <button onclick="turnOnBulb(1)">Light bulb 1</button>
+        <button onclick="turnOnBulb(2)">Light bulb 2</button>
+        <button onclick="turnOnBulb(3)">Light bulb 3</button>
+
+        <img id="bulb1" src="img/bulb-off.jpg" class="bulb" />
+        <img id="bulb2" src="img/bulb-off.jpg" class="bulb" />
+        <img id="bulb3" src="img/bulb-off.jpg" class="bulb" />
+    </div>
+
+    <script>
+
+        function turnOnBulb(i) {
+            document.getElementById(`bulb${i}`).src = "img/bulb-on.jpg"
+        }
+
+    </script>
+</body>
+</html>

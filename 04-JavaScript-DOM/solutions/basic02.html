@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Training</title>
+</head>
+
+<body>
+
+    <h1 id="rubbe">Rubrik</h1>
+
+
+    <button onclick="toggleGreenColor()">Grön varannan gång</button>
+
+    <button id="padde" onclick="paddington()">Ändra knappens storlek</button>
+
+    <button id="muso" onmouseover="setRedColor()" onmouseout="setBlackColor()">För musen över mig</button>
+    <button id="musooo">För musen över mig - alternativ</button>
+
+    <script>
+
+        /*
+    
+        Om användaren trycker på knapp1 => byt färg på rubriken till varannan gång grön och svart
+    
+        Tips:
+    
+            Skapa en variabel "writeInGreen" som håller koll på om texten ska vara grön eller svart 
+    
+            För att sätta en ny "styling" på ett element:
+    
+                mittElement.style.xxxxxx = .....
+        
+        */
+
+        let writeInGreen = false;
+
+        function toggleGreenColor() {
+
+            let rubbe = document.getElementById("rubbe");
+            writeInGreen = !writeInGreen;
+            if (writeInGreen)
+                rubbe.style.color = "green";
+            else
+                rubbe.style.color = "black";
+
+        }
+
+        /*
+            Om användaren trycker på knapp2 => öka "padding" på knappen med 10pixlar
+    
+        */
+
+        function paddington() {
+
+            let prev = document.getElementById("padde").style.padding
+            if (prev === "")
+                prev = "0px"
+
+            let parsed = parseInt(prev);
+
+            document.getElementById("padde").style.padding = `${parsed + 10}px`;
+        }
+
+        /*
+            Om användaren för musen över knappen => sätt färgen till röd (och återställ till svart när användaren för musen förbi knappen)
+        */
+
+        let muso = document.getElementById("muso");
+
+        function setRedColor() {
+            muso.style.color = "red";
+        };
+
+        function setBlackColor() {
+            muso.style.color = "black";
+        };
+
+        /*
+            Samma som sist men sätt "onmouseover" och "onmouseout" i javascriptkoden
+        */
+
+        let musooo = document.getElementById("musooo");
+
+        musooo.onmouseover = () => {              // bara ".mouseover" funkar inte
+            musooo.style.color = "blue";
+        };
+
+        musooo.onmouseout = () => {
+            musooo.style.color = "black";
+        };
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Training</title>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body class="page-black">
+
+    <div class="playground playground-black">
+        <button onclick="lightAllBulbs()">Light all bulbs</button>
+
+        <img id="bulb1" src="img/bulb-off.jpg" class="bulb" />
+        <img id="bulb2" src="img/bulb-off.jpg" class="bulb" />
+        <img id="bulb3" src="img/bulb-off.jpg" class="bulb" />
+    </div>
+
+    <script>
+
+        function turnOnBulb1() {
+            document.getElementById("bulb1").src = "img/bulb-on.jpg";
+        }
+
+        function turnOnBulb2() {
+            document.getElementById("bulb2").src = "img/bulb-on.jpg";
+        }
+        function turnOnBulb3() {
+            document.getElementById("bulb3").src = "img/bulb-on.jpg";
+        }
+
+        function lightAllBulbs() {
+            turnOnBulb1();
+            turnOnBulb2();
+            turnOnBulb3();
+        }
+
+    </script>
+</body>
+
+</html>

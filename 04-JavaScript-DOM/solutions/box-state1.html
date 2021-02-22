@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Training</title>
+    <style>
+        #box {
+            width: 300px;
+            height: 300px;
+            border: solid 1px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="redy()">Red</button>
+    <button onclick="greeny()">Green</button>
+    <button onclick="bluey()">Blue</button>
+
+    <div id="box">
+    </div>
+
+    <script>
+
+        let box = document.getElementById("box");
+
+        function redy() {
+            box.style.backgroundColor = "red";
+        };
+
+        function greeny() {
+            box.style.backgroundColor = "green";
+        };
+        function bluey() {
+            box.style.backgroundColor = "blue";
+        };
+    </script>
+
+</body>
+
+</html>

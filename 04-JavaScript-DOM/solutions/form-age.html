@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Training</title>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="playground">
+
+        <div>
+            Enter your age:
+        </div>
+
+        <input type="text" id="yourAge" />
+
+        <button id="okButton">Ok</button>
+
+        <div id="response" class="response">
+        </div>
+
+    </div>
+
+    <script>
+
+        // Respond in different way depending on the age entered
+
+        function writeText(message) {
+            document.getElementById("response").innerText = message;
+        }
+
+        function respondToUser() {
+
+            let enteredNumber = document.getElementById("yourAge").value;
+            let theValueEnteredIsAnumber = enteredNumber == parseInt(enteredNumber);
+
+            let response = "";
+
+            if (theValueEnteredIsAnumber == true) {
+
+                if (enteredNumber >= 30) {
+                    response = "You are really old"
+                } else {
+                    response = "You are still young"
+                }
+
+            } else {
+
+                response = "The value entered is not a number"
+
+            }
+
+            writeText(response)
+        }
+
+        document.getElementById("okButton").addEventListener("click", respondToUser);
+
+    </script>
+
+</body>
+
+</html>

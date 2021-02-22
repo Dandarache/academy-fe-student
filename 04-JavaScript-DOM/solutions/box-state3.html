@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Training</title>
+    <style>
+        #box {
+            width: 300px;
+            height: 300px;
+            border: solid 1px;
+        }
+
+        #buttonWrap {
+            margin-bottom: 20px
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="buttonWrap">
+        <button onclick="darker()">Darker</button>
+        <button onclick="redder()">Redder</button>
+    </div>
+
+    <div id="box">
+    </div>
+
+    <script>
+        let box = document.getElementById("box");
+        let currentState = 100;
+
+        function redraw() {
+            box.style.backgroundColor = `rgb(${currentState},0,0)`;
+        }
+
+        function darker() {
+            currentState -= 20;
+            if (currentState < 0) currentState = 0;
+            redraw();
+        }
+
+        function redder() {
+            currentState += 20;
+            if (currentState > 255) currentState = 255;
+            redraw();
+        }
+
+        redraw();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+
+<style>
+        #box {
+            width: 300px;
+            height: 300px;
+            border: solid 1px;
+            margin-top: 10px;
+        }
+    </style>
+    
+    <button onclick="changeColor('red')">Red</button>
+    <button onclick="changeColor('green')">Green</button>
+    <button onclick="changeColor('blue')">Blue</button>
+    
+    <div id="box">
+    </div>
+    
+    <script>
+    
+        let box = document.getElementById("box");
+    
+        function changeColor(x){
+            box.style.backgroundColor = x;
+        };
+    </script>
+    

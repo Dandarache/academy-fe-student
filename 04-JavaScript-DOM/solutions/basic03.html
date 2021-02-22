@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Training</title>
+</head>
+
+<body>
+
+    <button onclick="showCat()">Visa katt</button>
+    <div id="goodPlaceForCat"></div>
+
+    <button onclick="writeStaplerText()">Skriv text</button>
+
+    <input id="textruta" style="display:block" />
+    <button onclick="writeText()">Skriv text utifrån textrutan</button>
+
+    <div id="sometext">
+    </div>
+
+    <script>
+
+        /* 
+        Om användaren trycker på första knappen => visa en katt
+        
+        Extra: lös uppgiften på två sätt. Antingen genom ".innerHTML" eller genom "document.createElement"
+        Tips: xxxx.innerHTML = "här kan du skriva vilken htmlkod som helst" 
+        */
+
+        let goodPlaceForCat = document.getElementById("goodPlaceForCat");
+
+        function showCat() {
+            goodPlaceForCat.innerHTML = `<img style="width:200px" src="img/cat.jpg"/>`;
+        }
+
+        // Alternativ
+
+        /*
+        let goodPlaceForCat = document.getElementById("goodPlaceForCat");
+    
+        function showCat() {
+            let x = document.createElement("img")
+            x.src="img/cat.jpg"
+            x.style.width="200px"
+            goodPlaceForCat.innerText=""
+            goodPlaceForCat.appendChild(x)
+        }
+        */
+
+        /* 
+        Om användaren trycker på andra knappen => skriv en till rad "I believe you have my stapler."  till div'en "sometext"
+       
+        Tips, för att utöka htmlkoden i ett element: 
+        
+            xxx.innerHTML = xxx.innerHTML + "nån mer htmlkod"
+        */
+
+
+        function writeStaplerText() {
+            let sometext = document.getElementById("sometext");
+            sometext.innerHTML += '<br>I believe you have my stapler.';
+        };
+
+        /* Om användaren trycker på tredje knappen => skriv det som står i "textruta" i div'en "sometext"
+        
+        Tips: för att plocka ut det användaren matat in i en textruta:
+    
+            minTextruta.value
+        
+        */
+
+        function writeText() {
+            let sometext = document.getElementById("sometext");
+            let textruta = document.getElementById("textruta");
+
+            let textAttSkriva = textruta.value;
+            if (textAttSkriva == "") {
+                alert("Skriv nåt i textrutan")
+            } else {
+                sometext.innerHTML = sometext.innerHTML + "<br>" + textAttSkriva;
+            }
+        };
+
+
+    </script>
+
+</body>
+
+</html>

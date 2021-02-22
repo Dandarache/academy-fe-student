@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Training</title>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body class="page-black">
+
+    <div class="playground playground-black">
+        <button onclick="moveLightFromLeftToRight()">Press me</button>
+        <img id="bulb1" src="img/bulb-off.jpg" class="bulb-smaller" />
+        <img id="bulb2" src="img/bulb-off.jpg" class="bulb-smaller" />
+        <img id="bulb3" src="img/bulb-off.jpg" class="bulb-smaller" />
+        <img id="bulb4" src="img/bulb-off.jpg" class="bulb-smaller" />
+        <img id="bulb5" src="img/bulb-off.jpg" class="bulb-smaller" />
+        <div id="response" class="response-white">
+        </div>
+    </div>
+    <script>
+
+        let bulbNumber = 1;
+        let bulbOffImage = "img/bulb-off.jpg";
+        let bulbOnImage = "img/bulb-on.jpg";
+
+        function turnAllBulbsOff() {
+            document.getElementById("bulb1").src = bulbOffImage;
+            document.getElementById("bulb2").src = bulbOffImage;
+            document.getElementById("bulb3").src = bulbOffImage;
+            document.getElementById("bulb4").src = bulbOffImage;
+            document.getElementById("bulb5").src = bulbOffImage;
+        }
+
+        function turnOnBulb(index) {
+            document.getElementById("bulb" + index).src = bulbOnImage;
+        }
+
+        function writeTheValueOfbulbNumber() {
+
+            var stuff = "Current bulb: " + bulbNumber
+            document.getElementById("response").innerText = stuff;
+        }
+
+        function redraw() {
+            turnAllBulbsOff()
+            writeTheValueOfbulbNumber()
+            turnOnBulb(bulbNumber);
+        }
+
+        function moveLightFromLeftToRight() {
+            bulbNumber = bulbNumber + 1
+
+            if (bulbNumber > 5) bulbNumber = 1
+
+            redraw();
+        }
+
+        redraw();
+
+    </script>
+</body>
+
+</html>

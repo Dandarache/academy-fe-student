@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Training</title>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body class="page-black">
+
+    <div class="playground playground-black">
+        <button onclick="toggleBulb1()">Toggle bulb 1</button>
+        <button onclick="toggleBulb2()">Toggle bulb 2</button>
+        <button onclick="toggleBulb3()">Toggle bulb 3</button>
+
+        <img id="bulb1" src="img/bulb-off.jpg" class="bulb" />
+        <img id="bulb2" src="img/bulb-off.jpg" class="bulb" />
+        <img id="bulb3" src="img/bulb-off.jpg" class="bulb" />
+    </div>
+
+    <script>
+
+        let bulb1 = false;
+        let bulb2 = false;
+        let bulb3 = false;
+
+        let bulbOnImage = "img/bulb-on.jpg";
+        let bulbOffImage = "img/bulb-off.jpg";
+
+        function redraw() {
+
+            if (bulb1) {
+                document.getElementById("bulb1").src = bulbOnImage;
+            } else {
+                document.getElementById("bulb1").src = bulbOffImage;
+            }
+
+            if (bulb2) {
+                document.getElementById("bulb2").src = bulbOnImage;
+            } else {
+                document.getElementById("bulb2").src = bulbOffImage;
+            }
+
+            if (bulb3) {
+                document.getElementById("bulb3").src = bulbOnImage;
+            } else {
+                document.getElementById("bulb3").src = bulbOffImage;
+            }
+
+        }
+
+        function toggleBulb1() {
+            bulb1 = !bulb1;
+            redraw();
+        }
+
+        function toggleBulb2() {
+            bulb2 = !bulb2;
+            redraw();
+        }
+
+        function toggleBulb3() {
+            bulb3 = !bulb3;
+            redraw();
+        }
+
+    </script>
+</body>
+
+</html>

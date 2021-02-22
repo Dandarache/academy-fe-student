@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body class="page-black">
+
+    <div id="playground" class="playground playground-black">
+        <div style="color:white">Number of bulbs:</div>
+        <input onkeyup="numberOfBulbChanged(this)" />
+        <div id="bulbsAndButtons">
+        </div>
+    </div>
+
+    <script>
+
+        // Enklare lösning (men den glömmer tidigare lampor, så inte lika bra)
+        // Dynamic bulbs
+
+        let bulbState = [];
+        
+        function numberOfBulbChanged(t) {
+            
+            let enteredtext = t.value;
+            let parsed = parseInt(enteredtext)
+            let isValid = (enteredtext == parsed) && (parsed>=0);
+            if (isValid && parsed >  bulbState.length) {
+                // Användaren vill ha fler glödlampor
+                let bulbsToAdd = parsed - bulbState.length;
+                for(let i=0; i<bulbsToAdd; i++)
+                    bulbState.push(false);
+
+                renderBulbsAndButtons();
+                setOnOrOff();
+            } 
+            if (isValid && parsed <  bulbState.length) {
+                // Användaren vill ha färre
+                let bulbsToRemove = bulbState.length-parsed;
+                for(let i=0; i<bulbsToRemove; i++)
+                    bulbState.pop();
+
+                renderBulbsAndButtons();
+                setOnOrOff();
+            } 
+        }
+
+        function renderBulbsAndButtons() {
+            let buttonHtml = "";
+            let imgHtml = "";
+            let index=0;
+
+            for(let bulb of bulbState) {
+                buttonHtml += `<button class="toggle" onclick="toggleBulb(${index})">Toggle bulb ${index+1}</button>`;
+                imgHtml += `<img class="bulb" id="bulb${index}" />`;
+                index++;
+            }
+
+            document.getElementById("bulbsAndButtons").innerHTML = buttonHtml+imgHtml;
+        }
+
+        function setOnOrOff() {
+            let bulbOnImage = "img/bulb-on.jpg";
+            let bulbOffImage = "img/bulb-off.jpg";            
+            let index=0;
+
+            for(let bulb of bulbState) {
+                let bulbImage = (bulb)? bulbOnImage : bulbOffImage;
+                document.getElementById(`bulb${index}`).src = bulbImage;
+                index++;
+            }
+
+        }
+
+        function toggleBulb(index) {
+            bulbState[index] = !bulbState[index];
+            setOnOrOff();
+        }
+
+        renderBulbsAndButtons();
+        setOnOrOff();
+
+    </script>
+</body>
+</html>

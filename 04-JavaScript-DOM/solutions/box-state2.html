@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Training</title>
+    <style>
+        #box {
+            width: 300px;
+            height: 300px;
+            border: solid 1px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <button onclick="clicky()">Click me</button>
+
+    <div id="box">
+    </div>
+
+    <script>
+
+        let box = document.getElementById("box");
+        let paletteIndex = 0;
+        let palette = ["red", "green", "blue"]
+
+        function updateState() {
+            paletteIndex++;
+            if (paletteIndex >= palette.length)
+                paletteIndex = 0;
+        }
+
+        function redraw() {
+            box.style.backgroundColor = palette[paletteIndex];
+        }
+
+        function clicky() {
+            updateState()
+            redraw()
+        };
+
+        redraw();
+
+    </script>
+
+</body>
+
+</html>

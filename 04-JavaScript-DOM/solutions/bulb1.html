@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Training</title>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body class="page-black">
+
+    <div class="playground playground-black">
+
+        <button onclick="lightTheBulb()">Light bulb</button>
+
+        <img id="bulb1" src="img/bulb-off.jpg" class="bulb" />
+    </div>
+
+    <script>
+
+        function lightTheBulb() {
+            document.getElementById("bulb1").src = "img/bulb-on.jpg";
+        }
+
+    </script>
+
+</body>
+
+</html>
