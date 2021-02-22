@@ -8,7 +8,7 @@
     <title>JavaScript jQuery Training</title>
     <!-- Ange en referens till ett jQuery bibliotek nedan. Du kan antingen använda en referens till ett lokalt bibliotek eller en länk till CDN. -->
     <!-- TIPS: https://www.w3schools.com/jquery/jquery_get_started.asp -->
-    <!-- <script src="LÄNK_TILL_JQUERY"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -35,11 +35,17 @@
 
     <script>
 
+
+
         // UPPGIFT: Ändra rubriken som har id="heading" så att den visar "Hello Academy World!" 
         // Tips: Alla id:n behöver anges med #mitt_id i jQuery.
         // Tips: Använd metoden .text(...) för att ange vad som skall visas i heading.
 
         // Din kod ...
+
+        $(document).ready(function () {
+            $('#heading').text("Hello Academy World");
+        });
 
 
         // UPPGIFT: Ändra ingressen (preamble) så att dess värde blir "Idag skall vi lära oss <strong>jQuery</strong>".
