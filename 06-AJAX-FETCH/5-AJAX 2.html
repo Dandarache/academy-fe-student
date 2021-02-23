@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web API, fetch, AJAX</title>
+  <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="playground">
+
+    <button id="btGetData" onclick="loadDoc()">Hämta data</button>
+
+    <div id="response" class="response">
+    </div>
+
+  </div>
+
+  <script>
+
+    let responseData = [];
+
+    function loadDoc() {
+
+    }
+
+    function updateResponse() {
+      let responseDiv = document.getElementById("response");
+
+      for (const iterator of responseData) {
+
+        let heading2 = document.createElement('h2');
+        heading2.innerText = iterator.header; // Typning saknas!
+        responseDiv.appendChild(heading2);
+
+        let description = document.createElement('p');
+        description.innerText = iterator.description;
+        responseDiv.appendChild(description);
+
+      }
+    }
+
+  </script>
+
+</body>
+
+</html>

@@ -6,47 +6,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript jQuery Training</title>
-    <link href="css/main.css" rel="stylesheet">
+    <!-- <link href="css/main.css" rel="stylesheet"> -->
     <!-- Ange en referens till ett jQuery bibliotek nedan. Du kan antingen använda en referens till ett lokalt bibliotek eller en länk till CDN. -->
     <!-- TIPS: https://www.w3schools.com/jquery/jquery_get_started.asp -->
-    <!-- <script src="LÄNK_TILL_JQUERY"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
 
     <div class="playground">
 
-        <div>
-            Förnamn:
-        </div>
-        <input type="text" id="firstName" />
+        <form action="https://www.w3schools.com/action_page.php" method="POST">
+            <div>
+                Förnamn:
+            </div>
+            <input type="text" id="firstName" name="firstName" value="Förvalt namn" />
 
-        <div>
-            Förnamn:
-        </div>
-        <input type="text" id="lastName" />
+            <div>
+                Efternamn:
+            </div>
+            <input type="text" id="lastName" name="lastName" />
 
-        <div>
-            Postnummer:
-        </div>
-        <input type="text" id="zipCode" />
+            <div>
+                Postnummer:
+            </div>
+            <input type="text" id="zipCode" name="zipCode" />
 
-        <div>
-            Ålder:
-        </div>
-        <input type="text" id="age" />
+            <div>
+                Ort:
+            </div>
+            <input type="text" name="city" id="city">
 
-        <div>
-            Email:
-        </div>
-        <input type="text" id="email" />
+            <div>
+                Ålder:
+            </div>
+            <input type="text" id="age" name="age" />
 
-        <div>
-            Hobby:
-        </div>
-        <input type="text" id="email" />
+            <!-- <div>
+                Huvudsport:
+            </div>
+            <input type="text" id="mainSport" name="mainSport" value="Pilbågsskytte" readonly /> -->
 
-        <button id="btSend">Ok</button>
+            <div>
+                Email:
+            </div>
+            <input type="text" id="email" name="email" required />
+
+            <div>
+                Hobby:
+            </div>
+            <textarea name="hobby" id="hobby" cols="30" rows="10"></textarea>
+
+            <p>
+                <button id="btSend" type="button">Skicka anmälan</button>
+                <!-- <button id="btSend" type="submit">Skicka anmälan</button> -->
+                <!-- <input type="submit" value="OK input type submit"> -->
+                <input type="reset" value="Nollställ">
+            </p>
+
+        </form>
 
         <div id="validationErrors" class="response">
         </div>
@@ -56,6 +74,43 @@
     <script>
 
         // UPPGIFT: Validera att alla formulärdata är korrekta när formuläret postas ovan.
+
+        // Gör så att koden exekveras först när hela sidan laddats.
+        $(document).ready(function () {
+
+            $('#btSend').click(function(){
+
+                // Validering av data ...
+                let formOk = true;
+                
+                // Kontrollera förnamn
+                let fn = $('#firstName').val();
+                if (fn=='') {
+                    formOk = false;
+                }
+
+                // Kontrollera efternamn
+                let ln = $('#lastName').val();
+                if (ln=='') {
+                    formOk = false;
+                }
+
+                if (formOk) {
+
+                    // Skicka formuläret
+                    document.forms[0].submit();
+                    
+                    
+                } else {
+                    
+                    // Säg till att något är fel
+                    
+                    $('#validationErrors').text('Något är fel!');
+                    
+                }
+            });
+        });
+
 
         // Om någonting saknas skall alla felaktiga fält visas upp som en punktad lista i rutan validationErrors.
 
@@ -68,12 +123,12 @@
         //    - Emailadress är obligatorisk.
         //    - Ålder skall vara mellan 18 och 65 år. 
         //    - Ålder är obligatorisk.
-        
+
         // Tips: Kontrollera att fälten för för- och efternamn inte är tomma genom att kolla längden på strängen.
 
         // Tips: Det räcker med att email innehåller ett @-tecken. 
         //       Om du vill kan du använda regex för att validera emailadressen.
-        
+
         // Tips: Kontrollera postnummer genom att räkna antal tecken plus att du även 
         //       kollar att det inte blir isNaN om du kör parseInt. Bästa sättet att kontrollera
         //       postnummer är dock att använda regex, så prova gärna detta.
