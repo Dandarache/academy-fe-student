@@ -7,13 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Web API, fetch, AJAX</title>
   <link href="css/main.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
 
   <div class="playground">
 
-    <button id="btGetData" onclick="loadDoc()">Hämta data</button>
+    <button id="btGetData">Hämta data</button>
 
     <div id="response" class="response">
     </div>
@@ -22,16 +23,15 @@
 
   <script>
 
-    function loadDoc() {
-      var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-          console.log(this.responseText);
-          updateResponse(JSON.parse(this.responseText));
-        }
-      };
-      xhttp.open("GET", "https://jsonplaceholder.typicode.com/posts/", true);
-      xhttp.send();
+    // https://api.jquery.com/jquery.get/
+
+    let btGetData = document.getElementById('btGetData');
+    btGetData.onclick = () => {
+
+      $.get("https://jsonplaceholder.typicode.com/posts/", function (data) {
+        updateResponse(data);
+      });
+
     }
 
     function updateResponse(responseData) {
@@ -40,7 +40,7 @@
       for (const iterator of responseData) {
 
         let heading2 = document.createElement('h2');
-        heading2.innerText = iterator.title; // Typning saknas!
+        heading2.innerText = iterator.title; 
         responseDiv.appendChild(heading2);
 
         let description = document.createElement('p');

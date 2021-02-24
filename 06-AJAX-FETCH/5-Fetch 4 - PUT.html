@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web API, fetch, AJAX</title>
+  <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="playground">
+
+    <button id="btUpdateData" onclick="updateData()">Uppdatera data</button>
+
+    <div id="response" class="response">
+    </div>
+
+  </div>
+
+  <script>
+
+    // Detta exempel använder följande tjänst för att 
+    // göra WebAPI anrop med hjälp av JS fetch.
+    //
+    // https://jsonplaceholder.typicode.com/guide/
+    //
+    // Tjänsten har många s.k. endpoints som gör 
+    // det möjligt att testa GET, POST, DELETE, PUT, ...
+    //
+    // Testa gärna att göra samma sak som nedan med
+    // applikationen Postman.
+
+    // Fetchen nedan kommer att göra en UPDATE mot endpointen
+    // vilket kommer uppdatera ett objekt i tjänsten som anropas.
+
+    let btUpdateData = document.getElementById('btUpdateData');
+    btUpdateData.onclick = () => {
+      fetch('https://jsonplaceholder.typicode.com/posts/1', {
+        method: 'PUT',
+        body: JSON.stringify({
+          id: 12,
+          title: 'Uppdaterad data',
+          body: `Detta data uppdaterades klockan ${new Date().toLocaleString()}`,
+          userId: 1,
+        }),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      })
+        .then((response) => response.json())
+        .then((json) => updateResponse(json));
+    }
+
+    // Visa resultat
+    function updateResponse(responseData) {
+
+      console.log(responseData);
+
+      let responseDiv = document.getElementById("response");
+
+      let h2 = document.createElement('h2');
+      h2.innerText = 'New record created';
+      responseDiv.appendChild(h2);
+
+      let pTitle = document.createElement('p');
+      pTitle.innerText = `title: ${responseData.title}`;
+      responseDiv.appendChild(pTitle);
+
+      let pBody = document.createElement('p');
+      pBody.innerText = `body: ${responseData.body}`;
+      responseDiv.appendChild(pBody);
+
+      let pId = document.createElement('p');
+      pId.innerText = `id: ${responseData.id}`;
+      responseDiv.appendChild(pId);
+
+      let pUserId = document.createElement('p');
+      pUserId.innerText = `userId: ${responseData.userId}`;
+      responseDiv.appendChild(pUserId);
+
+    }
+
+  </script>
+
+</body>
+
+</html>
