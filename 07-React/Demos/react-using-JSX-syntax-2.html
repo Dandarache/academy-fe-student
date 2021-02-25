@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React using JSX</title>
+
+    <style>
+        .App {
+            text-align: center;
+        }
+
+        .App-header {
+            background-color: #282c34;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: calc(10px + 2vmin);
+            color: white;
+        }
+
+        .Article {
+            background-color: #e4e4e4;
+            margin: 10px;
+        }
+
+        .ArticleChildren {
+            background-color: white;
+            border: solid 2px #e4e4e4;
+            text-align: left;
+            padding: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+    <script type="text/babel">
+
+        // Detta är ett exempel på React med JSX-syntax, dvs att man använder
+        // taggar som påminner om HTML för att visa innehåll.
+        const HelloMessage = React.createClass({
+            render: function () {
+                const name = "Dan Jansson's Website"
+                const today = new Date().toLocaleDateString()
+
+                return (
+                    <div className='App'>
+                        <header className='App-header'>
+                            <h1>Welcome to {name}!</h1>
+                        </header>
+                        <p>Today is {today}</p>
+                        <Article title='Learning React' />
+                        <Article title='Learning JSX' />
+                        <Article title={'Dan testar ' + today} />
+                    </div>
+                )
+
+            }
+        });
+
+        function Article(props) {
+            return (
+                <div className='Article'>
+                    <h2>{props.title}</h2>
+
+                </div>
+            )
+        }
+
+        ReactDOM.render(
+            <HelloMessage name="Dan Jansson" />,
+            document.getElementById('root')
+        );
+
+    </script>
+
+</body>
+
+</html>

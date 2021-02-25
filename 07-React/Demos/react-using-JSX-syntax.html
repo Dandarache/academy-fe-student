@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React using JSX</title>
+
+    <style>
+        .app {
+            max-width: 500px;
+            border: outset 3px brown;
+            padding: 10px;
+            margin: auto;
+        }
+
+        .title {
+            text-decoration: overline underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+    <script type="text/babel">
+
+        // Detta är ett exempel på React med JSX-syntax, dvs att man använder
+        // taggar som påminner om HTML för att visa innehåll.
+        const HelloMessage = React.createClass({
+            render: function () {
+                return <div className='app'>
+                    <h1 className='title'>Hello using JSX</h1>
+                    <p>This is a React App by: &nbsp;
+                                <strong>{this.props.name}</strong>
+                    </p>
+                </div>;
+            }
+        });
+
+        ReactDOM.render(
+            <HelloMessage name="Dan Jansson" />,
+            document.getElementById('root')
+        );
+
+    </script>
+
+</body>
+
+</html>

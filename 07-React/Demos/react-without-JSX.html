@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Without JSX</title>
+
+    <style>
+        .app {
+            max-width: 500px;
+            border: outset 3px brown;
+            padding: 10px;
+            margin: auto;
+        }
+
+        .title {
+            text-decoration: overline underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="root">
+        This content will be replaced by React.
+    </div>
+    
+    <!-- Include React -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+    <script>
+        const name = "Dan Jansson";
+
+        function Author(props) {
+            return React.createElement("strong", {}, props.name);
+        }
+
+        const appElement = React.createElement("div", {'class': 'app'}, 
+            React.createElement("h1", {'class': 'title'}, "Hello"),
+            React.createElement("p", {},
+                "This is a simple React App by: ",
+                React.createElement(Author, {name: name})
+            )
+        );
+
+        ReactDOM.render(appElement, document.getElementById('root'));
+    </script>
+</body>
+</html>
